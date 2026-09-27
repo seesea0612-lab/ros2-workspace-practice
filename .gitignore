@@ -1,0 +1,7 @@
+build/
+install/
+log/
+
+src/my_package/
+src/py_pubsub/
+src/ros_tutorials/
