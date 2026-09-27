@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='wangcc',
     maintainer_email='wangccseesea0612@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='My first ROS2 Python package and node practice.',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',

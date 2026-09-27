@@ -26,6 +26,7 @@ Directory structure:
 ```text
 ros2_ws
 ├── src
+│   ├── my_first_package
 │   └── turtle_publisher_py
 ├── build
 ├── install
