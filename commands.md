@@ -185,3 +185,99 @@ Push to GitHub:
 ```bash
 git push
 ```
+
+---
+
+# 8. My First ROS2 Package
+
+## Create Package
+
+```bash
+cd ~/ros2_ws/src
+ros2 pkg create my_first_package --build-type ament_python
+```
+
+## Inspect Package Structure
+
+```bash
+cd ~/ros2_ws/src/my_first_package
+tree
+```
+
+## Create Node File
+
+```bash
+cd ~/ros2_ws/src/my_first_package/my_first_package
+touch my_node.py
+code my_node.py
+```
+
+## Configure ROS2 Executable
+
+Edit:
+
+```bash
+cd ~/ros2_ws/src/my_first_package
+code setup.py
+```
+
+The console script entry is:
+
+```text
+my_node = my_first_package.my_node:main
+```
+
+## Build Package
+
+```bash
+cd ~/ros2_ws
+colcon build --packages-select my_first_package
+```
+
+## Source Workspace
+
+```bash
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+```
+
+## Run Node
+
+```bash
+ros2 run my_first_package my_node
+```
+
+## Check Running Nodes
+
+In another terminal:
+
+```bash
+source ~/ros2_ws/install/setup.bash
+ros2 node list
+```
+
+Expected output:
+
+```text
+/my_first_node
+```
+
+## Check Environment
+
+```bash
+printenv ROS_DISTRO
+lsb_release -ds
+python3 --version
+uname -m
+ros2 pkg prefix my_first_package
+```
+
+Recorded environment:
+
+```text
+ROS_DISTRO: jazzy
+Ubuntu: 24.04.4 LTS
+Python: 3.12.3
+Architecture: x86_64
+Package prefix: /home/wangcc/ros2_ws/install/my_first_package
+```
